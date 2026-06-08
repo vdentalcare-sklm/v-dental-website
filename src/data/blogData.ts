@@ -36,7 +36,7 @@ export const blogPosts = [
     category: "Oral Surgery",
     date: "May 02, 2026",
     readTime: "6 min read",
-    image: "/images/blog/wisdom.png",
+    image: "/images/treatments/wisdom-teeth-v2.png",
     slug: "understanding-wisdom-tooth-removal"
   },
   {
