@@ -49,7 +49,7 @@ export default function AwarenessGallery() {
   }, [selectedIndex]);
 
   return (
-    <section className="py-24 md:py-32 bg-background text-white overflow-hidden border-t border-white/5">
+    <section className="py-24 md:py-32 bg-[#F2FBF7] text-text-primary overflow-hidden border-t border-[#E5E7EB]">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         
         {/* Header Section */}
@@ -60,13 +60,13 @@ export default function AwarenessGallery() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-brand-400 font-medium tracking-[0.2em] text-sm uppercase mb-4">
+            <h3 className="text-[#005C96] font-medium tracking-[0.2em] text-sm uppercase mb-4">
               Dental Awareness & Patient Education
             </h3>
             <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6">
               Empowering Smiles Through Knowledge
             </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed">
+            <p className="text-lg text-text-primary/70 leading-relaxed">
               Explore educational insights, oral health awareness tips, and patient-focused information curated by V Dental.
             </p>
           </motion.div>
@@ -84,7 +84,7 @@ export default function AwarenessGallery() {
               className="break-inside-avoid relative group cursor-pointer"
               onClick={() => openLightbox(idx)}
             >
-              <div className={`relative w-full rounded-2xl overflow-hidden glass border border-white/5 group-hover:border-brand-500/30 transition-all duration-500 shadow-lg group-hover:shadow-[0_0_30px_rgba(14,111,165,0.2)] group-hover:-translate-y-2 ${flyer.aspect}`}>
+              <div className={`relative w-full rounded-2xl overflow-hidden glass border border-[#E5E7EB] group-hover:border-brand-500/30 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:-translate-y-2 ${flyer.aspect}`}>
                 <Image
                   src={flyer.src}
                   alt={flyer.alt}
@@ -95,7 +95,7 @@ export default function AwarenessGallery() {
                 
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="bg-brand-500/90 p-4 rounded-full text-white transform scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500 shadow-[0_0_20px_rgba(14,111,165,0.5)]">
+                  <div className="bg-[#005C96]/90 p-4 rounded-full text-text-primary transform scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500 shadow-xl">
                     <ZoomIn className="w-6 h-6" />
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export default function AwarenessGallery() {
           >
             {/* Close Button */}
             <button 
-              className="absolute top-6 right-6 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-3 rounded-full transition-colors z-[60]"
+              className="absolute top-6 right-6 text-text-primary/50 hover:text-text-primary bg-[#005C96]/5 hover:bg-[#005C96]/10 p-3 rounded-full transition-colors z-[60]"
               onClick={closeLightbox}
             >
               <X className="w-6 h-6" />
@@ -127,7 +127,7 @@ export default function AwarenessGallery() {
 
             {/* Prev Button */}
             <button 
-              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-4 rounded-full transition-colors z-[60] hidden md:block"
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-text-primary/50 hover:text-text-primary bg-[#005C96]/5 hover:bg-[#005C96]/10 p-4 rounded-full transition-colors z-[60] hidden md:block"
               onClick={showPrev}
             >
               <ChevronLeft className="w-8 h-8" />
@@ -135,7 +135,7 @@ export default function AwarenessGallery() {
 
             {/* Next Button */}
             <button 
-              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-4 rounded-full transition-colors z-[60] hidden md:block"
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-text-primary/50 hover:text-text-primary bg-[#005C96]/5 hover:bg-[#005C96]/10 p-4 rounded-full transition-colors z-[60] hidden md:block"
               onClick={showNext}
             >
               <ChevronRight className="w-8 h-8" />

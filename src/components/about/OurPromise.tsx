@@ -38,9 +38,9 @@ export default function OurPromise() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-surface text-white relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#FAFAF7] text-text-primary relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-brand-900/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#005C96]/10 rounded-full hidden pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
         <motion.div
@@ -51,9 +51,9 @@ export default function OurPromise() {
           className="text-center mb-16 md:mb-24"
         >
           <h2 className="text-3xl md:text-5xl font-light leading-tight mb-4">
-            Our Promise <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-600">To Every Patient</span>
+            Our Promise <span className="font-medium text-[#083D5B]">To Every Patient</span>
           </h2>
-          <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-text-secondary text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
             The values that guide every consultation, treatment, and smile transformation at V Dental.
           </p>
         </motion.div>
@@ -70,14 +70,14 @@ export default function OurPromise() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-500/0 to-brand-500/0 group-hover:from-brand-500/5 group-hover:to-transparent transition-all duration-500 rounded-3xl pointer-events-none" />
               
-              <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 mb-6 group-hover:scale-110 group-hover:bg-brand-500/20 group-hover:text-brand-300 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-[#005C96]/10 flex items-center justify-center text-[#005C96] mb-6 group-hover:scale-110 group-hover:bg-[#005C96]/20 group-hover:text-[#5AA647] transition-all duration-300">
                 <promise.icon className="w-6 h-6" strokeWidth={1.5} />
               </div>
               
-              <h3 className="text-xl font-medium text-white mb-3">
+              <h3 className="text-xl font-medium text-text-primary mb-3">
                 {promise.title}
               </h3>
-              <p className="text-gray-400 font-light leading-relaxed group-hover:text-gray-300 transition-colors">
+              <p className="text-text-secondary font-light leading-relaxed group-hover:text-text-secondary transition-colors">
                 {promise.description}
               </p>
             </motion.div>

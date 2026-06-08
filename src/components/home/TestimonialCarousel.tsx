@@ -1,74 +1,119 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Jenkins",
-    text: "The level of care and detail at V Dental is unmatched. My smile makeover was a truly luxurious experience from start to finish.",
-    treatment: "Smile Makeover"
+    quote: "The level of care and precision at V Dental is unparalleled. From the moment I walked in, I felt confident I was in the hands of true medical professionals.",
+    author: "Kavitha Reddy",
+    treatment: "Full Mouth Rehabilitation",
+    rating: 5,
   },
   {
     id: 2,
-    name: "Michael Chang",
-    text: "I used to dread the dentist, but the ambiance and professionalism here completely changed my perspective. Flawless veneers.",
-    treatment: "Veneers"
+    quote: "Exceptional facility and outstanding doctors. They took the time to thoroughly explain every step of my implant procedure. Truly a premium experience.",
+    author: "Srinivasa Rao",
+    treatment: "Dental Implants",
+    rating: 5,
   },
   {
     id: 3,
-    name: "Elena Rodriguez",
-    text: "State-of-the-art facility with a team that treats you like royalty. The Invisalign process was seamless.",
-    treatment: "Invisalign"
+    quote: "As someone with severe dental anxiety, the calm, professional, and luxurious environment completely put me at ease. The results are flawless.",
+    author: "Priya Krishnan",
+    treatment: "Cosmetic Dentistry",
+    rating: 5,
   }
 ];
 
 export default function TestimonialCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const next = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
-    <section className="py-24 relative overflow-hidden bg-surface">
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      
+    <section className="py-20 md:py-32 bg-[#EAF5FB]">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-semibold text-white mb-6">
-            Stories of <span className="text-brand-400">Transformation</span>
+          <h3 className="text-[#0B5D8C] font-semibold tracking-[0.15em] text-sm uppercase mb-4 flex items-center justify-center gap-4">
+            <span className="w-12 h-[1px] bg-[#0B5D8C]"></span>
+            Patient Stories
+            <span className="w-12 h-[1px] bg-[#0B5D8C]"></span>
+          </h3>
+          <h2 className="text-4xl md:text-5xl font-light text-[#083D5B] mb-6">
+            Words from Our <span className="font-medium">Patients</span>
           </h2>
-          <p className="text-lg text-foreground/70">
-            Hear from our patients who have experienced the V Dental difference.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, i) => (
+        <div className="max-w-5xl mx-auto relative">
+          <div className="overflow-hidden px-4 py-8">
             <motion.div
-              key={testimonial.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              className="glass p-8 rounded-3xl relative group hover:-translate-y-2 transition-transform duration-500"
+              key={currentIndex}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-[2rem] p-10 md:p-16 shadow-lg border border-gray-100 flex flex-col items-center text-center relative"
             >
-              <Quote className="w-10 h-10 text-brand-500/20 absolute top-8 right-8 group-hover:text-brand-500/40 transition-colors" />
+              <Quote className="w-16 h-16 text-[#C2E1F2] mb-8" />
               
-              <div className="flex flex-col h-full justify-between gap-8 relative z-10">
-                <p className="text-lg text-foreground/90 leading-relaxed font-medium">
-                  "{testimonial.text}"
+              <p className="text-2xl md:text-3xl text-[#1E293B] font-light leading-relaxed mb-10 italic">
+                "{testimonials[currentIndex].quote}"
+              </p>
+              
+              <div>
+                <h4 className="text-xl font-semibold text-[#083D5B] mb-1">
+                  {testimonials[currentIndex].author}
+                </h4>
+                <p className="text-[#475569] font-medium">
+                  {testimonials[currentIndex].treatment}
                 </p>
-                
-                <div>
-                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                  <p className="text-sm text-brand-400">{testimonial.treatment}</p>
-                </div>
               </div>
             </motion.div>
-          ))}
+          </div>
+
+          <div className="flex justify-center items-center gap-6 mt-8">
+            <button
+              onClick={prev}
+              className="w-12 h-12 rounded-full border border-[#0B5D8C] text-[#0B5D8C] flex items-center justify-center transition-colors hover:bg-[#0B5D8C] hover:text-white"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <div className="flex gap-3">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    idx === currentIndex ? "bg-[#0B5D8C]" : "bg-[#C2E1F2]"
+                  }`}
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={next}
+              className="w-12 h-12 rounded-full border border-[#0B5D8C] text-[#0B5D8C] flex items-center justify-center transition-colors hover:bg-[#0B5D8C] hover:text-white"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

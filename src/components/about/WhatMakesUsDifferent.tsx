@@ -33,7 +33,7 @@ export default function WhatMakesUsDifferent() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-background text-white overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#F2FBF7] text-text-primary overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ export default function WhatMakesUsDifferent() {
           className="mb-16 md:mb-24"
         >
           <h2 className="text-3xl md:text-5xl font-light leading-tight">
-            What Makes Us <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-600">Different</span>
+            What Makes Us <span className="font-medium text-[#083D5B]">Different</span>
           </h2>
         </motion.div>
 
@@ -60,14 +60,14 @@ export default function WhatMakesUsDifferent() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-500/0 to-brand-500/0 group-hover:from-brand-500/10 group-hover:to-transparent transition-all duration-500 rounded-3xl pointer-events-none" />
               
-              <div className="w-16 h-16 rounded-2xl bg-brand-500/10 flex items-center justify-center text-brand-400 mb-8 group-hover:scale-110 group-hover:bg-brand-500/20 group-hover:text-brand-300 transition-all duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-[#005C96]/10 flex items-center justify-center text-[#005C96] mb-8 group-hover:scale-110 group-hover:bg-[#005C96]/20 group-hover:text-[#5AA647] transition-all duration-300">
                 <feature.icon className="w-8 h-8" strokeWidth={1.5} />
               </div>
               
-              <h3 className="text-xl font-medium text-white mb-4">
+              <h3 className="text-xl font-medium text-text-primary mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-400 font-light leading-relaxed group-hover:text-gray-300 transition-colors">
+              <p className="text-text-secondary font-light leading-relaxed group-hover:text-text-secondary transition-colors">
                 {feature.description}
               </p>
             </motion.div>

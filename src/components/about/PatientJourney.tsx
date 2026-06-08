@@ -1,10 +1,15 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function PatientJourney() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -21,7 +26,7 @@ export default function PatientJourney() {
   ];
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 bg-surface text-white relative overflow-hidden">
+    <section ref={containerRef} className="py-24 md:py-32 bg-[#FAFAF7] text-text-primary relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,19 +36,19 @@ export default function PatientJourney() {
           className="text-center mb-24"
         >
           <h2 className="text-3xl md:text-5xl font-light leading-tight">
-            Your Journey to a <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-600">Confident Smile</span>
+            Your Journey to a <span className="font-medium text-[#083D5B]">Confident Smile</span>
           </h2>
         </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
           {/* Vertical line for mobile, Horizontal for desktop */}
-          <div className="absolute left-6 md:left-0 top-0 bottom-0 md:top-12 md:bottom-auto w-[2px] md:w-full md:h-[2px] bg-white/10" />
+          <div className="absolute left-6 md:left-0 top-0 bottom-0 md:top-12 md:bottom-auto w-[2px] md:w-full md:h-[2px] bg-[#005C96]/10" />
           
           <motion.div 
-            className="absolute left-6 md:left-0 top-0 bottom-0 md:top-12 md:bottom-auto w-[2px] md:w-full md:h-[2px] bg-gradient-to-b md:bg-gradient-to-r from-brand-300 to-brand-600 origin-top md:origin-left"
+            className="absolute left-6 md:left-0 top-0 bottom-0 md:top-12 md:bottom-auto w-[2px] md:w-full md:h-[2px] bg-gradient-to-b md:bg-gradient-to-r from-[#005C96] to-[#5AA647] origin-top md:origin-left"
             style={{ 
-              scaleY: typeof window !== 'undefined' && window.innerWidth < 768 ? scrollYProgress : 1,
-              scaleX: typeof window !== 'undefined' && window.innerWidth >= 768 ? scrollYProgress : 1,
+              scaleY: mounted && window.innerWidth < 768 ? scrollYProgress : 1,
+              scaleX: mounted && window.innerWidth >= 768 ? scrollYProgress : 1,
             }}
           />
 
@@ -57,7 +62,7 @@ export default function PatientJourney() {
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
                 className="flex md:flex-col items-center md:text-center gap-6 md:gap-8 w-full md:w-auto relative"
               >
-                <div className="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-surface border-2 border-brand-500/50 flex items-center justify-center text-brand-400 font-medium text-lg md:text-xl relative z-10 shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                <div className="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-white border-2 border-brand-500/50 flex items-center justify-center text-[#005C96] font-medium text-lg md:text-xl relative z-10 shadow-xl">
                   {step.num}
                 </div>
                 

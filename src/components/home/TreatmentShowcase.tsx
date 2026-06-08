@@ -1,186 +1,116 @@
 "use client";
 
-import { useRef, useState, MouseEvent } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const treatments = [
   {
-    id: 1,
+    id: "implants",
     title: "Dental Implants",
-    description: "Permanent tooth replacement solutions designed to restore function, confidence, and natural aesthetics.",
-    slug: "dental-implants",
-    image: "/images/treatments/dental-implants.png"
+    description: "Permanent, natural-looking replacement teeth anchored securely in your jawbone, restoring both function and aesthetics seamlessly.",
+    image: "/images/treatments/dental-implants-v2.png",
+    link: "/treatments/dental-implants"
   },
   {
-    id: 2,
-    title: "Braces & Aligners",
-    description: "Advanced orthodontic solutions including braces and clear aligners for perfectly aligned smiles.",
-    slug: "braces-aligners",
-    image: "/images/treatments/braces-aligners.png"
+    id: "cosmetic",
+    title: "Cosmetic Dentistry",
+    description: "Transform your smile with porcelain veneers, professional whitening, and comprehensive smile makeovers tailored to your facial aesthetics.",
+    image: "/images/treatments/smile-makeover.png",
+    link: "/treatments/cosmetic"
   },
   {
-    id: 3,
-    title: "Smile Makeover",
-    description: "Comprehensive smile transformation treatments designed to enhance aesthetics and confidence.",
-    slug: "smile-makeover",
-    image: "/images/treatments/smile-makeover.png"
-  },
-  {
-    id: 4,
-    title: "Restorations",
-    description: "Restore damaged or decayed teeth using modern restorative dental treatments and advanced materials.",
-    slug: "restorations",
-    image: "/images/treatments/restorations.png"
-  },
-  {
-    id: 5,
-    title: "Wisdom Teeth",
-    description: "Safe and comfortable wisdom tooth evaluation and extraction procedures performed by experienced specialists.",
-    slug: "wisdom-teeth",
-    image: "/images/treatments/wisdom-teeth.png"
-  },
-  {
-    id: 6,
-    title: "Gum Care",
-    description: "Specialized treatments focused on gum health, infection control, and long-term oral wellness.",
-    slug: "gum-care",
-    image: "/images/treatments/gum-care.png"
+    id: "orthodontics",
+    title: "Orthodontics",
+    description: "State-of-the-art clear aligners and modern orthodontic solutions to straighten your teeth discreetly and comfortably.",
+    image: "/images/treatments/braces-aligners.png",
+    link: "/treatments/orthodontics"
   }
 ];
 
 export default function TreatmentShowcase() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [dragged, setDragged] = useState(false);
-
-  const handleMouseDown = (e: MouseEvent) => {
-    if (!scrollContainerRef.current) return;
-    setIsDragging(true);
-    setDragged(false);
-    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging || !scrollContainerRef.current) return;
-    e.preventDefault();
-    setDragged(true);
-    const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll-fast multiplier
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleClick = (e: MouseEvent) => {
-    if (dragged) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  };
-
   return (
-    <section className="py-24 overflow-hidden relative">
+    <section className="py-20 md:py-32 bg-[#FAFAF7] text-[#1E293B]">
       <div className="container mx-auto px-6 md:px-12 mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row justify-between items-end gap-8"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto"
         >
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-display font-semibold text-white mb-6">
-              Curated <span className="text-brand-400">Treatments</span>
-            </h2>
-            <p className="text-lg text-foreground/70">
-              Discover our signature procedures designed to enhance your natural beauty and ensure optimal oral health. Every treatment is tailored specifically to you.
-            </p>
-          </div>
-          <Link href="/treatments" className="group flex items-center gap-2 text-brand-300 hover:text-brand-400 font-medium transition-colors">
-            View All Treatments
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Link>
+          <h3 className="text-[#0B5D8C] font-semibold tracking-[0.15em] text-sm uppercase mb-4 flex items-center justify-center gap-4">
+            <span className="w-12 h-[1px] bg-[#0B5D8C]"></span>
+            Specialized Care
+            <span className="w-12 h-[1px] bg-[#0B5D8C]"></span>
+          </h3>
+          <h2 className="text-4xl md:text-5xl font-light mb-6 text-[#083D5B]">
+            Comprehensive <span className="font-medium">Treatments</span>
+          </h2>
+          <p className="text-lg text-[#475569]">
+            We offer a full spectrum of advanced dental procedures under one roof, utilizing the latest in medical technology.
+          </p>
         </motion.div>
       </div>
 
-      {/* Scrolling Carousel */}
-      <div className="relative w-full">
-        {/* Left/Right Fade Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
-        <div 
-          ref={scrollContainerRef}
-          onMouseDown={handleMouseDown}
-          onMouseLeave={handleMouseLeave}
-          onMouseUp={handleMouseUp}
-          onMouseMove={handleMouseMove}
-          className={`flex gap-6 md:gap-8 px-6 md:px-32 py-12 overflow-x-auto hide-scrollbar snap-x snap-mandatory ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} touch-pan-x`}
-          style={{ scrollBehavior: isDragging ? 'auto' : 'smooth' }}
-        >
-          {[...treatments, ...treatments].map((treatment, i) => (
-            <Link 
-              href={`/treatments/${treatment.slug}`} 
-              key={`${treatment.id}-${i}`}
-              onClick={handleClick}
-              draggable={false}
-              className="snap-center shrink-0"
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {treatments.map((treatment, index) => (
+            <motion.div
+              key={treatment.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group flex flex-col bg-white rounded-[2rem] overflow-hidden shadow-md border border-gray-100 transition-shadow duration-300 hover:shadow-xl"
             >
-              <motion.div
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative w-[320px] md:w-[420px] aspect-[4/5] rounded-3xl overflow-hidden glass p-8 flex flex-col justify-end border border-white/5 hover:border-brand-500/30 transition-colors"
-              >
-                {/* Image Background */}
-                <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-3xl">
-                  <Image 
-                    src={treatment.image} 
-                    alt={treatment.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-                </div>
+              <div className="relative h-64 w-full overflow-hidden bg-gray-100">
+                <Image
+                  src={treatment.image}
+                  alt={treatment.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-semibold mb-3 text-[#083D5B]">
+                  {treatment.title}
+                </h3>
+                <p className="text-[#475569] mb-8 flex-grow leading-relaxed">
+                  {treatment.description}
+                </p>
                 
-                <div className="relative z-10 pointer-events-none">
-                  <h3 className="text-3xl font-display font-semibold text-white mb-4 group-hover:text-brand-300 transition-colors">
-                    {treatment.title}
-                  </h3>
-                  <p className="text-foreground/70 mb-8 line-clamp-3">
-                    {treatment.description}
-                  </p>
-                  
-                  <div className="flex items-center gap-2 text-sm font-medium text-white/50 group-hover:text-white transition-colors">
-                    Explore Procedure
-                    <ArrowRight className="w-4 h-4 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                  </div>
-                </div>
-              </motion.div>
-            </Link>
+                <Link
+                  href={treatment.link}
+                  className="inline-flex items-center gap-2 text-[#0B5D8C] font-medium transition-colors hover:text-[#084A70]"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-16 text-center"
+        >
+          <Link
+            href="/treatments"
+            className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#0B5D8C] text-[#0B5D8C] rounded-full font-medium transition-all hover:bg-[#0B5D8C] hover:text-white"
+          >
+            View All Treatments
+          </Link>
+        </motion.div>
       </div>
-      
-      <style jsx global>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
   );
 }
+

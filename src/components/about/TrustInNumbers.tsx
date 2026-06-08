@@ -41,7 +41,7 @@ export default function TrustInNumbers() {
   ];
 
   return (
-    <section className="py-24 bg-surface text-white border-y border-white/5">
+    <section className="py-24 bg-[#FAFAF7] text-text-primary border-y border-[#E5E7EB]">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
           {stats.map((stat, idx) => (
@@ -53,10 +53,10 @@ export default function TrustInNumbers() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="text-center flex flex-col items-center justify-center gap-2"
             >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-light text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-600">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-light text-[#083D5B]">
                 <Counter to={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="text-gray-400 text-sm md:text-base font-light tracking-wide uppercase">
+              <p className="text-text-secondary text-sm md:text-base font-light tracking-wide uppercase">
                 {stat.label}
               </p>
             </motion.div>

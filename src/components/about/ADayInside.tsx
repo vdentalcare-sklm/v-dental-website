@@ -1,10 +1,15 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function ADayInside() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -45,7 +50,7 @@ export default function ADayInside() {
   ];
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 bg-background text-white relative overflow-hidden">
+    <section ref={containerRef} className="py-24 md:py-32 bg-[#083D5B] text-white relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,9 +60,9 @@ export default function ADayInside() {
           className="text-center mb-24"
         >
           <h2 className="text-3xl md:text-5xl font-light leading-tight mb-4">
-            A Day Inside <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-600">V Dental</span>
+            A Day Inside <span className="font-semibold text-[#91C6E6]">V Dental</span>
           </h2>
-          <p className="text-gray-400 text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[#C2E1F2] text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed">
             From your first visit to your final smile transformation, experience a patient journey designed around comfort, precision, and care.
           </p>
         </motion.div>
@@ -67,10 +72,10 @@ export default function ADayInside() {
           <div className="absolute left-[39px] md:left-0 top-0 bottom-0 md:top-12 md:bottom-auto w-[2px] md:w-full md:h-[2px] bg-white/10" />
           
           <motion.div 
-            className="absolute left-[39px] md:left-0 top-0 bottom-0 md:top-12 md:bottom-auto w-[2px] md:w-full md:h-[2px] bg-gradient-to-b md:bg-gradient-to-r from-brand-300 to-brand-600 origin-top md:origin-left"
+            className="absolute left-[39px] md:left-0 top-0 bottom-0 md:top-12 md:bottom-auto w-[2px] md:w-full md:h-[2px] bg-gradient-to-b md:bg-gradient-to-r from-[#91C6E6] to-[#5AA647] origin-top md:origin-left"
             style={{ 
-              scaleY: typeof window !== 'undefined' && window.innerWidth < 768 ? scrollYProgress : 1,
-              scaleX: typeof window !== 'undefined' && window.innerWidth >= 768 ? scrollYProgress : 1,
+              scaleY: mounted && window.innerWidth < 768 ? scrollYProgress : 1,
+              scaleX: mounted && window.innerWidth >= 768 ? scrollYProgress : 1,
             }}
           />
 
@@ -84,15 +89,15 @@ export default function ADayInside() {
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
                 className="flex md:flex-col md:items-center text-left md:text-center gap-6 w-full md:w-[220px] lg:w-[260px] relative group"
               >
-                <div className="w-20 h-20 shrink-0 rounded-full bg-background border-2 border-white/10 group-hover:border-brand-500/50 flex items-center justify-center text-white/50 group-hover:text-brand-400 font-medium text-xl transition-colors duration-300 relative z-10 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                <div className="w-20 h-20 shrink-0 rounded-full bg-[#083D5B] border-2 border-white/20 group-hover:border-[#91C6E6] flex items-center justify-center text-white/50 group-hover:text-[#91C6E6] font-medium text-xl transition-colors duration-300 relative z-10 group-hover:shadow-[0_0_20px_rgba(145,198,230,0.3)]">
                   {step.num}
                 </div>
                 
                 <div className="flex flex-col gap-2 pt-2 md:pt-4">
-                  <h3 className="text-lg font-medium text-gray-200 leading-tight group-hover:text-white transition-colors">
+                  <h3 className="text-lg font-medium text-white/80 leading-tight group-hover:text-white transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-gray-400 font-light leading-relaxed group-hover:text-gray-300 transition-colors">
+                  <p className="text-sm text-[#C2E1F2]/80 font-light leading-relaxed group-hover:text-[#C2E1F2] transition-colors">
                     {step.description}
                   </p>
                 </div>
