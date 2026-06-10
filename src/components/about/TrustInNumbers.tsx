@@ -34,8 +34,8 @@ function Counter({ from = 0, to, duration = 2, suffix = "" }: { from?: number, t
 
 export default function TrustInNumbers() {
   const stats = [
-    { value: 10000, suffix: "+", label: "Happy Smiles" },
-    { value: 15, suffix: "+", label: "Years of Experience" },
+    { value: 11000, suffix: "+", label: "Happy Smiles" },
+    { value: 17, suffix: "+", label: "Years of Experience" },
     { value: 1000, suffix: "+", label: "Implant Cases" },
     { value: 98, suffix: "%", label: "Patient Satisfaction" },
   ];

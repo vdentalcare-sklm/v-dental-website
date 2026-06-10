@@ -5,7 +5,7 @@ import AnimatedBackground from "@/components/ui/AnimatedBackground";
 export default function Footer() {
   return (
     <footer className="bg-black pt-20 pb-10 text-gray-300 relative overflow-hidden">
-      <AnimatedBackground theme="dark" count={8} />
+      <AnimatedBackground theme="dark" count={10} mobileCount={10} />
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         {/* 3-Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mb-16">

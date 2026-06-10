@@ -25,6 +25,7 @@ const MinimalSmiley = ({ className, strokeWidth = 1.5, style }: { className?: st
 type AnimatedBackgroundProps = {
   theme?: "light" | "dark";
   count?: number;
+  mobileCount?: number;
 };
 
 type SmileyConfig = {
@@ -40,12 +41,14 @@ type SmileyConfig = {
   rotationAmount?: number;
 };
 
-export default function AnimatedBackground({ theme = "light", count = 15 }: AnimatedBackgroundProps) {
+export default function AnimatedBackground({ theme = "light", count = 15, mobileCount }: AnimatedBackgroundProps) {
   const [smileys, setSmileys] = useState<SmileyConfig[]>([]);
 
   useEffect(() => {
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    const actualCount = isMobile ? Math.floor(count * 0.5) : count;
+    const actualCount = isMobile 
+      ? (mobileCount !== undefined ? mobileCount : Math.floor(count * 0.5)) 
+      : count;
 
     const generatedSmileys: SmileyConfig[] = [];
     // Using soft colors explicitly

@@ -9,10 +9,10 @@ import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 // Placeholder data for dynamic routing with expanded details
 const treatmentData = {
-  "veneers": {
-    title: "Porcelain Veneers",
+  "cosmetic": {
+    title: "Smile Makeovers",
     description: "Transform your smile with ultra-thin, custom-made porcelain shells that perfect shape, size, and color. Achieve the flawless, radiant smile you've always desired.",
-    extendedDescription: "Veneers are one of the most transformative treatments in cosmetic dentistry. They can correct a multitude of aesthetic concerns, from severe discoloration and chips to minor misalignments and gaps. Our master ceramists handcraft each veneer to perfectly complement your facial structure, ensuring a completely natural look.",
+    extendedDescription: "Veneers and comprehensive cosmetic procedures are some of the most transformative treatments in dentistry. They can correct a multitude of aesthetic concerns, from severe discoloration and chips to minor misalignments and gaps. Our master ceramists handcraft each restoration to perfectly complement your facial structure, ensuring a completely natural look.",
     image: "/images/treatments/smile-makeover.png",
     benefits: [
       "Stain-resistant premium porcelain material",
@@ -26,12 +26,12 @@ const treatmentData = {
       { step: "01", title: "Comprehensive Consultation", desc: "We discuss your aesthetic goals, take digital impressions, and use advanced software to design your perfect smile before any work begins." },
       { step: "02", title: "Gentle Preparation", desc: "Your teeth are gently prepared by removing a fraction of a millimeter of enamel. A precise impression is taken for our master ceramist." },
       { step: "03", title: "Trial Smile", desc: "You'll wear temporary veneers that replicate your new design, allowing you to test-drive your new smile while the permanent ones are crafted." },
-      { step: "04", title: "Final Bonding", desc: "Your custom porcelain veneers are permanently bonded seamlessly to your teeth, instantly transforming your appearance." }
+      { step: "04", title: "Final Bonding", desc: "Your custom porcelain restorations are permanently bonded seamlessly to your teeth, instantly transforming your appearance." }
     ],
     faq: [
-      { q: "How long do porcelain veneers last?", a: "With proper oral hygiene and regular dental checkups, high-quality porcelain veneers can last 10 to 15 years, and often much longer." },
+      { q: "How long do smile makeovers last?", a: "With proper oral hygiene and regular dental checkups, high-quality porcelain restorations can last 10 to 15 years, and often much longer." },
       { q: "Does getting veneers hurt?", a: "The procedure is minimally invasive. We use local anesthesia during the preparation phase to ensure you are completely comfortable and pain-free." },
-      { q: "Can I eat normally with veneers?", a: "Yes! Once permanently bonded, your veneers function like natural teeth. However, we recommend avoiding biting into extremely hard objects like ice or hard candies to prevent chipping." }
+      { q: "Can I eat normally with my new smile?", a: "Yes! Once permanently bonded, your restorations function like natural teeth. However, we recommend avoiding biting into extremely hard objects to prevent chipping." }
     ]
   },
   "dental-implants": {
@@ -59,7 +59,7 @@ const treatmentData = {
       { q: "Am I a good candidate for dental implants?", a: "Most adults with good general and oral health, and adequate jawbone density, are good candidates. If you have bone loss, we may recommend a bone graft before placement." }
     ]
   },
-  "wisdom-teeth": {
+  "oral-surgery": {
     title: "Wisdom Teeth",
     description: "Safe and comfortable wisdom tooth evaluation and extraction procedures performed by experienced specialists.",
     extendedDescription: "Wisdom tooth extraction is a common procedure designed to prevent or resolve issues like impaction, crowding, and infection. Our highly skilled oral surgeons use the latest techniques to ensure the process is as smooth, comfortable, and painless as possible.",
@@ -80,6 +80,75 @@ const treatmentData = {
       { q: "Will I be awake during the procedure?", a: "We offer several sedation options, from local anesthesia to IV sedation. We'll help you choose the best option for your comfort level." },
       { q: "How long does the recovery take?", a: "Most patients resume normal activities within 3 to 4 days, though full healing of the gum tissue takes a few weeks." },
       { q: "What can I eat after the extraction?", a: "Stick to soft foods like yogurt, applesauce, and smoothies for the first few days. Avoid using straws, as the suction can disturb the healing site." }
+    ]
+  },
+  "orthodontics": {
+    title: "Braces & Aligners",
+    description: "Advanced orthodontic solutions including braces and clear aligners for perfectly aligned smiles.",
+    extendedDescription: "Whether you choose traditional braces or clear aligners, our orthodontic treatments are designed to correct misalignments and give you a perfectly straight smile. We use the latest technology to ensure your treatment is as efficient and comfortable as possible.",
+    image: "/images/treatments/braces-aligners-v2.png",
+    benefits: [
+      "Custom fit for maximum comfort",
+      "Discreet options available",
+      "Predictable and precise results",
+      "Improves overall bite function"
+    ],
+    process: [
+      { step: "01", title: "Detailed Consultation", desc: "Initial assessment, diagnostic imaging, and discussion of your orthodontic goals." },
+      { step: "02", title: "Treatment Planning", desc: "We present a tailored plan outlining timeline, costs, and expected outcomes." },
+      { step: "03", title: "Expert Procedure", desc: "Our specialists begin your treatment with precision and a focus on your comfort." },
+      { step: "04", title: "Aftercare & Follow-up", desc: "Regular check-ins and adjustments to ensure your smile perfectly aligns." }
+    ],
+    faq: [
+      { q: "How do I prepare for this treatment?", a: "During your initial consultation, we will provide you with specific, easy-to-follow instructions tailored to your personalized procedure." },
+      { q: "Is this treatment covered by insurance?", a: "Coverage varies significantly by provider and plan. Our dedicated concierge team will help you navigate your benefits and explore flexible financing options." },
+      { q: "What is the typical recovery time?", a: "Recovery depends on the complexity of your individual case. We will discuss this with you in detail beforehand and provide all necessary aftercare support." }
+    ]
+  },
+  "endodontics": {
+    title: "Root Canal",
+    description: "Pain-free root canal treatments to save your natural tooth and eliminate infection.",
+    extendedDescription: "Root canal therapy is a highly effective way to relieve dental pain and save your natural tooth. We use advanced techniques and anesthesia to ensure the procedure is as comfortable and efficient as a routine filling.",
+    image: "/images/treatments/restorations.png",
+    benefits: [
+      "Pain-free procedure",
+      "Saves your natural tooth",
+      "Advanced technology for precision",
+      "Eliminates infection and prevents its spread"
+    ],
+    process: [
+      { step: "01", title: "Detailed Consultation", desc: "Initial assessment, diagnostic imaging, and discussion of your goals." },
+      { step: "02", title: "Treatment Planning", desc: "We present a tailored plan outlining timeline, costs, and expected outcomes." },
+      { step: "03", title: "Expert Procedure", desc: "Our specialists execute the treatment with precision and a focus on your comfort." },
+      { step: "04", title: "Aftercare & Follow-up", desc: "Comprehensive post-treatment care to ensure optimal healing and longevity." }
+    ],
+    faq: [
+      { q: "How do I prepare for this treatment?", a: "During your initial consultation, we will provide you with specific, easy-to-follow instructions tailored to your personalized procedure." },
+      { q: "Is this treatment covered by insurance?", a: "Coverage varies significantly by provider and plan. Our dedicated concierge team will help you navigate your benefits and explore flexible financing options." },
+      { q: "What is the typical recovery time?", a: "Recovery depends on the complexity of your individual case. We will discuss this with you in detail beforehand and provide all necessary aftercare support." }
+    ]
+  },
+  "laser": {
+    title: "Laser Dental Treatments",
+    description: "State-of-the-art laser dentistry for minimally invasive treatments and faster healing times.",
+    extendedDescription: "Laser dentistry offers a more comfortable and precise alternative to traditional methods. It minimizes discomfort, reduces bleeding, and accelerates the healing process across a variety of dental procedures.",
+    image: "/images/treatments/gum-care.png",
+    benefits: [
+      "Minimally invasive approach",
+      "Faster healing and recovery",
+      "Enhanced precision",
+      "Reduced need for anesthesia"
+    ],
+    process: [
+      { step: "01", title: "Detailed Consultation", desc: "Initial assessment, diagnostic imaging, and discussion of your goals." },
+      { step: "02", title: "Treatment Planning", desc: "We present a tailored plan outlining timeline, costs, and expected outcomes." },
+      { step: "03", title: "Expert Procedure", desc: "Our specialists execute the treatment with precision and a focus on your comfort." },
+      { step: "04", title: "Aftercare & Follow-up", desc: "Comprehensive post-treatment care to ensure optimal healing and longevity." }
+    ],
+    faq: [
+      { q: "How do I prepare for this treatment?", a: "During your initial consultation, we will provide you with specific, easy-to-follow instructions tailored to your personalized procedure." },
+      { q: "Is this treatment covered by insurance?", a: "Coverage varies significantly by provider and plan. Our dedicated concierge team will help you navigate your benefits and explore flexible financing options." },
+      { q: "What is the typical recovery time?", a: "Recovery depends on the complexity of your individual case. We will discuss this with you in detail beforehand and provide all necessary aftercare support." }
     ]
   }
 };

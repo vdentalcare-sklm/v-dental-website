@@ -15,14 +15,14 @@ const treatments = [
   },
   {
     id: "cosmetic",
-    title: "Cosmetic Dentistry",
+    title: "Smile Makeovers",
     description: "Transform your smile with porcelain veneers, professional whitening, and comprehensive smile makeovers tailored to your facial aesthetics.",
     image: "/images/treatments/smile-makeover.png",
     link: "/treatments/cosmetic"
   },
   {
     id: "orthodontics",
-    title: "Orthodontics",
+    title: "Braces & Aligners",
     description: "State-of-the-art clear aligners and modern orthodontic solutions to straighten your teeth discreetly and comfortably.",
     image: "/images/treatments/braces-aligners-v2.png",
     link: "/treatments/orthodontics"
