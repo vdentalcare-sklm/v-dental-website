@@ -8,7 +8,7 @@ export default function AppointmentPage() {
     {
       name: "Srikakulam Branch",
       address: "Above Eye Max Opticals, Krishna Park Junction, Srikakulam, Andhra Pradesh – 532001",
-      phone: "+91 81423 81021",
+      phone: "+91 95505 08480",
       hours: "Mon – Sun | 9:00 AM – 9:00 PM",
       mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.889397637841!2d83.9!3d18.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sin!4v3",
       isMain: true

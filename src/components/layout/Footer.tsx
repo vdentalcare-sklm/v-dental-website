@@ -56,7 +56,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <span className="text-[#7CC45B] mt-1">📞</span>
                 <div>
-                  <p className="font-medium">+91 81423 81021 <span className="text-white/60 text-sm font-normal">(Srikakulam)</span> <span className="text-[#5AA647] text-xs ml-1 font-semibold border border-[#5AA647]/30 px-1 rounded">Main</span></p>
+                  <p className="font-medium">+91 95505 08480 <span className="text-white/60 text-sm font-normal">(Srikakulam)</span> <span className="text-[#5AA647] text-xs ml-1 font-semibold border border-[#5AA647]/30 px-1 rounded">Main</span></p>
                   <p className="font-medium">+91 88866 76687 <span className="text-white/60 text-sm font-normal">(Vizianagaram)</span></p>
                   <p className="font-medium">+91 81796 22722 <span className="text-white/60 text-sm font-normal">(Vizag)</span></p>
                 </div>

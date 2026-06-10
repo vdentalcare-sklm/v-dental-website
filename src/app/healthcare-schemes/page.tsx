@@ -13,8 +13,8 @@ export default function HealthcareSchemesPage() {
   return (
     <div className="flex flex-col w-full bg-[#F2FBF7]">
       <SchemesHero />
-      <NoCostEmi />
       <EhsScheme />
+      <NoCostEmi />
       <WhyVDentalSchemes />
       <SchemesCTA />
     </div>

@@ -24,7 +24,7 @@ const treatments = [
     id: "orthodontics",
     title: "Orthodontics",
     description: "State-of-the-art clear aligners and modern orthodontic solutions to straighten your teeth discreetly and comfortably.",
-    image: "/images/treatments/braces-aligners.png",
+    image: "/images/treatments/braces-aligners-v2.png",
     link: "/treatments/orthodontics"
   }
 ];

@@ -43,9 +43,14 @@ const partners = [
 
 export default function NoCostEmi() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-[#F2FBF7] relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="bg-white border border-[#5AA647]/10 shadow-[0_20px_60px_-15px_rgba(90,166,71,0.15)] rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden">
+          
+          {/* Top highlight bar */}
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#5AA647] to-[#005C96]" />
+
+          <div className="flex flex-col lg:flex-row gap-16 items-center relative z-10">
           
           {/* Left Content */}
           <motion.div 
@@ -126,6 +131,7 @@ export default function NoCostEmi() {
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#EAF5FB] to-[#F1F8F2] rounded-full blur-3xl opacity-50" />
           </motion.div>
 
+        </div>
         </div>
       </div>
     </section>

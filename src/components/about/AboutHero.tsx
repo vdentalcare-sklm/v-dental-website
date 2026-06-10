@@ -23,7 +23,7 @@ export default function AboutHero() {
           className="hidden md:flex absolute top-[10%] left-[2%] lg:left-[5%] bg-white px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] items-center gap-3 border border-white/80 z-20"
         >
           <span className="text-xl">⭐</span>
-          <span className="text-sm font-semibold text-[#083D5B]">5000+ Happy Smiles</span>
+          <span className="text-sm font-semibold text-[#083D5B]">11000+ Happy Smiles</span>
         </motion.div>
 
         <motion.div 

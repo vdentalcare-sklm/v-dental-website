@@ -13,6 +13,7 @@ export default function HeroSection() {
     { name: "Smile Makeovers", link: "/treatments/cosmetic" },
     { name: "Root Canal", link: "/treatments/endodontics" },
     { name: "Wisdom Teeth", link: "/treatments/oral-surgery" },
+    { name: "Laser Dental Treatments", link: "/treatments/laser" },
   ];
 
   return (
@@ -60,12 +61,12 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6 pt-6 border-t border-[#0B5D8C]/10 text-sm font-medium text-[#1E293B]">
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
-                <span>5000+ Happy Smiles</span>
+                <span>11000+ Happy Smiles</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-[#CBD5E1]" />
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
-                <span>15+ Years Experience</span>
+                <span>17+ Years Experience</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-[#CBD5E1]" />
               <div className="flex items-center gap-2 text-[#5A9A43]">
@@ -76,12 +77,12 @@ export default function HeroSection() {
             {/* Treatment Quick Preview */}
             <div className="mt-8">
               <p className="text-sm font-semibold text-[#64748B] mb-3 uppercase tracking-wider">Specialized Treatments</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {treatments.map((t, i) => (
                   <Link 
                     key={i} 
                     href={t.link}
-                    className="px-4 py-2 rounded-full bg-white border border-[#E2E8F0] text-[#0F172A] text-sm font-medium hover:border-[#0B5D8C] hover:text-[#0B5D8C] hover:bg-[#F8FAFC] transition-all shadow-sm hover:shadow"
+                    className="px-4 py-2 rounded-full bg-white border border-[#E2E8F0] text-[#0F172A] text-sm font-medium transition-all shadow-sm hover:-translate-y-0.5 hover:shadow-md hover:border-[#0B5D8C] hover:text-[#0B5D8C] hover:bg-[#F8FAFC]"
                   >
                     {t.name}
                   </Link>

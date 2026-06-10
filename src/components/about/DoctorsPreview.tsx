@@ -9,19 +9,25 @@ export default function DoctorsPreview() {
       name: "Dr. John Madugula",
       designation: "Managing Director",
       description: "Leading V Dental with a vision of delivering world-class dental care through advanced technology, ethical treatment practices, and patient-centered excellence.",
-      image: "/images/team/dr-john-madugula.jpg",
-    },
-    {
-      name: "Mr. Ramesh K M K",
-      designation: "Director",
-      description: "Driving operational excellence and strategic growth while ensuring a seamless patient experience across all V Dental locations.",
-      image: "/images/team/mr-ramesh.jpg",
+      image: "/images/team/dr-john-madugula-v2.jpg",
     },
     {
       name: "Dr. Anita Madugula",
       designation: "Chief Dental Surgeon & Dental Implantologist",
       description: "Specializing in advanced dental implantology and comprehensive smile rehabilitation with a strong focus on precision, aesthetics, and patient comfort.",
-      image: "/images/team/dr-anita.png",
+      image: "/images/team/dr-anita-v2.jpg",
+    },
+    {
+      name: "Mr. Ramesh K M K",
+      designation: "Director",
+      description: "Driving operational excellence and strategic growth while ensuring a seamless patient experience across all V Dental locations.",
+      image: "/images/team/mr-ramesh.png",
+    },
+    {
+      name: "K. Pruthvi Raj",
+      designation: "Corporate Manager",
+      description: "Fostering strategic corporate alliances and ensuring streamlined operations to deliver seamless, top-tier dental healthcare services to all our corporate partners.",
+      image: "/images/team/k-pruthvi-raj.png",
     }
   ];
 
@@ -46,7 +52,7 @@ export default function DoctorsPreview() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {doctors.map((doctor, idx) => (
             <motion.div
               key={idx}

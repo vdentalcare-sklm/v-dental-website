@@ -15,38 +15,38 @@ const treatments = [
     image: "/images/treatments/dental-implants-v2.png"
   },
   {
-    id: "braces-aligners",
+    id: "orthodontics",
     title: "Braces & Aligners",
     description: "Advanced orthodontic solutions including braces and clear aligners for perfectly aligned smiles.",
     features: ["Custom fit", "Discreet options", "Predictable results"],
-    image: "/images/treatments/braces-aligners.png"
+    image: "/images/treatments/braces-aligners-v2.png"
   },
   {
-    id: "smile-makeover",
-    title: "Smile Makeover",
+    id: "cosmetic",
+    title: "Smile Makeovers",
     description: "Comprehensive smile transformation treatments designed to enhance aesthetics and confidence.",
     features: ["Personalized", "Comprehensive", "Aesthetic focus"],
     image: "/images/treatments/smile-makeover.png"
   },
   {
-    id: "restorations",
-    title: "Restorations",
-    description: "Restore damaged or decayed teeth using modern restorative dental treatments and advanced materials.",
-    features: ["Durable materials", "Natural look", "Restores function"],
+    id: "endodontics",
+    title: "Root Canal",
+    description: "Pain-free root canal treatments to save your natural tooth and eliminate infection.",
+    features: ["Pain-free procedure", "Saves natural tooth", "Advanced technology"],
     image: "/images/treatments/restorations.png"
   },
   {
-    id: "wisdom-teeth",
+    id: "oral-surgery",
     title: "Wisdom Teeth",
     description: "Safe and comfortable wisdom tooth evaluation and extraction procedures performed by experienced specialists.",
     features: ["Safe extraction", "Pain management", "Quick recovery"],
     image: "/images/treatments/wisdom-teeth-v2.png"
   },
   {
-    id: "gum-care",
-    title: "Gum Care & Periodontal",
-    description: "Specialized treatments focused on gum health, infection control, and long-term oral wellness.",
-    features: ["Infection control", "Deep cleaning", "Long-term health"],
+    id: "laser",
+    title: "Laser Dental Treatments",
+    description: "State-of-the-art laser dentistry for minimally invasive treatments and faster healing times.",
+    features: ["Minimally invasive", "Faster healing", "Enhanced precision"],
     image: "/images/treatments/gum-care.png"
   }
 ];

@@ -9,7 +9,7 @@ import AnimatedBackground from "@/components/ui/AnimatedBackground";
 export default function GalleryPage() {
   return (
     <div className="pt-32 pb-0 bg-[#F2FBF7] relative overflow-hidden">
-      <AnimatedBackground count={15} />
+      <AnimatedBackground count={45} />
       {/* 1. Gallery Hero Section */}
       <section className="container mx-auto px-6 md:px-12 mb-0 text-center max-w-3xl">
         <motion.div
