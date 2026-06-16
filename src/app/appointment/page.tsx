@@ -62,7 +62,7 @@ export default function AppointmentPage() {
   const [name, setName]                 = useState("");
   const [phone, setPhone]               = useState("");
   const [email, setEmail]               = useState("");
-  const [treatment, setTreatment]       = useState(TREATMENTS[0].value);
+  const [treatment, setTreatment] = useState("");
   const [formState, setFormState]       = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -242,23 +242,19 @@ if (data.success && Array.isArray(data.branches) && data.branches.length > 0) {
                   </div>
                 </div>
 
-                {/* Treatment */}
+{/* Treatment */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-text-secondary">
                     Treatment of Interest
                   </label>
-                  <select
+                  <input
+                    type="text"
                     value={treatment}
                     onChange={(e) => setTreatment(e.target.value)}
                     disabled={formState === "loading"}
-                    className="w-full bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-[#005C96] focus:ring-1 focus:ring-[#005C96] transition-colors appearance-none disabled:opacity-50"
-                  >
-                    {TREATMENTS.map((t) => (
-                      <option key={t.value} value={t.value}>
-                        {t.label}
-                      </option>
-                    ))}
-                  </select>
+                    placeholder="e.g. Dental Implants, Teeth Whitening..."
+                    className="w-full bg-white/[0.02] border border-[#E5E7EB] rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-[#005C96] focus:ring-1 focus:ring-[#005C96] transition-colors disabled:opacity-50"
+                  />
                 </div>
 
                 {/* Error */}
@@ -319,7 +315,7 @@ if (data.success && Array.isArray(data.branches) && data.branches.length > 0) {
                   Our team is available via WhatsApp for priority booking and urgent queries.
                 </p>
                 <button
-                  onClick={() => window.open("https://wa.me/918179622722", "_blank")}
+                  onClick={() => window.open("https://wa.me/910000000000", "_blank")}
                   className="w-full bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] font-medium py-4 rounded-xl transition-colors flex items-center justify-center gap-2 border border-[#25D366]/30"
                 >
                   <MessageSquare className="w-5 h-5" />
