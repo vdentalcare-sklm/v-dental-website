@@ -95,6 +95,11 @@ if (data.success && Array.isArray(data.branches) && data.branches.length > 0) {
       setErrorMessage("Please enter your phone number.");
       return;
     }
+    if (!treatment.trim()) {
+      setFormState("error");
+      setErrorMessage("Please enter your treatment of interest.");
+      return;
+    }
 
     setFormState("loading");
 
@@ -124,12 +129,12 @@ if (data.success && Array.isArray(data.branches) && data.branches.length > 0) {
     }
   }
 
-  function handleBookAnother() {
+function handleBookAnother() {
     setFormState("idle");
     setName("");
     setPhone("");
     setEmail("");
-    setTreatment(TREATMENTS[0].value);
+    setTreatment("");
     setErrorMessage("");
   }
 
@@ -243,9 +248,9 @@ if (data.success && Array.isArray(data.branches) && data.branches.length > 0) {
                 </div>
 
 {/* Treatment */}
-                <div className="space-y-2">
+<div className="space-y-2">
                   <label className="text-sm font-medium text-text-secondary">
-                    Treatment of Interest
+                    Treatment of Interest <span className="text-red-400">*</span>
                   </label>
                   <input
                     type="text"
