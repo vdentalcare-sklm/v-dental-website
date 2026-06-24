@@ -36,8 +36,7 @@ export default function PrivacyPolicyPage() {
               1. Introduction
             </h2>
             <p className="text-text-secondary font-light leading-relaxed">
-              V Dental Hospitals (&quot;we&quot;, &quot;our&quot;, or
-              &quot;us&quot;) is committed to protecting your personal
+              V Dental Hospitals is committed to protecting your personal
               information. This Privacy Policy explains how we collect, use, and
               safeguard the information you provide when you use our website at{" "}
               <a

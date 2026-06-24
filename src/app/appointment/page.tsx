@@ -320,7 +320,7 @@ function handleBookAnother() {
                   Our team is available via WhatsApp for priority booking and urgent queries.
                 </p>
                 <button
-                  onClick={() => window.open("https://wa.me/910000000000", "_blank")}
+                  onClick={() => window.open("https://wa.me/919550508480", "_blank")}
                   className="w-full bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] font-medium py-4 rounded-xl transition-colors flex items-center justify-center gap-2 border border-[#25D366]/30"
                 >
                   <MessageSquare className="w-5 h-5" />
