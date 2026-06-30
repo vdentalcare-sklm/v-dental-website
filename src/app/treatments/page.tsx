@@ -33,7 +33,7 @@ const treatments = [
     title: "Root Canal",
     description: "Pain-free root canal treatments to save your natural tooth and eliminate infection.",
     features: ["Pain-free procedure", "Saves natural tooth", "Advanced technology"],
-    image: "/images/treatments/restorations.png"
+    image: "/images/treatments/root_canal.png"
   },
   {
     id: "oral-surgery",
@@ -47,7 +47,42 @@ const treatments = [
     title: "Laser Dental Treatments",
     description: "State-of-the-art laser dentistry for minimally invasive treatments and faster healing times.",
     features: ["Minimally invasive", "Faster healing", "Enhanced precision"],
+    image: "/images/treatments/laser_treatment.png"
+  },
+  {
+    id: "teeth-whitening",
+    title: "Teeth Whitening",
+    description: "Professional whitening treatments to safely and effectively brighten your smile.",
+    features: ["Safe & effective", "Immediate results", "Long-lasting"],
+    image: "/images/treatments/teeth_whitening.png"
+  },
+  {
+    id: "crowns-bridges",
+    title: "Dental Crowns & Bridges",
+    description: "Custom-crafted crowns and bridges to restore damaged or missing teeth.",
+    features: ["Natural look", "Durable materials", "Restores function"],
+    image: "/images/treatments/crown_bridge.png"
+  },
+  {
+    id: "periodontics",
+    title: "Gum Treatments (Periodontics)",
+    description: "Comprehensive care for healthy gums, treating and preventing periodontal disease.",
+    features: ["Deep cleaning", "Disease prevention", "Gum health restoration"],
     image: "/images/treatments/gum-care.png"
+  },
+  {
+    id: "dentures",
+    title: "Dentures",
+    description: "Comfortable, natural-looking partial and complete dentures to restore your smile.",
+    features: ["Custom fit", "Natural appearance", "Improved chewing"],
+    image: "/images/treatments/dentures.png"
+  },
+  {
+    id: "full-mouth-rehab",
+    title: "Full Mouth Rehabilitation",
+    description: "Comprehensive restorative and cosmetic treatments to fully rebuild your smile and oral health.",
+    features: ["Complete restoration", "Personalized plan", "Enhanced function & aesthetics"],
+    image: "/images/treatments/mouth_rehabilitation.png"
   }
 ];
 

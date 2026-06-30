@@ -109,7 +109,7 @@ const treatmentData = {
     title: "Root Canal",
     description: "Pain-free root canal treatments to save your natural tooth and eliminate infection.",
     extendedDescription: "Root canal therapy is a highly effective way to relieve dental pain and save your natural tooth. We use advanced techniques and anesthesia to ensure the procedure is as comfortable and efficient as a routine filling.",
-    image: "/images/treatments/restorations.png",
+    image: "/images/treatments/root_canal.png",
     benefits: [
       "Pain-free procedure",
       "Saves your natural tooth",
@@ -132,7 +132,7 @@ const treatmentData = {
     title: "Laser Dental Treatments",
     description: "State-of-the-art laser dentistry for minimally invasive treatments and faster healing times.",
     extendedDescription: "Laser dentistry offers a more comfortable and precise alternative to traditional methods. It minimizes discomfort, reduces bleeding, and accelerates the healing process across a variety of dental procedures.",
-    image: "/images/treatments/gum-care.png",
+    image: "/images/treatments/laser_treatment.png",
     benefits: [
       "Minimally invasive approach",
       "Faster healing and recovery",
@@ -149,6 +149,121 @@ const treatmentData = {
       { q: "How do I prepare for this treatment?", a: "During your initial consultation, we will provide you with specific, easy-to-follow instructions tailored to your personalized procedure." },
       { q: "Is this treatment covered by insurance?", a: "Coverage varies significantly by provider and plan. Our dedicated concierge team will help you navigate your benefits and explore flexible financing options." },
       { q: "What is the typical recovery time?", a: "Recovery depends on the complexity of your individual case. We will discuss this with you in detail beforehand and provide all necessary aftercare support." }
+    ]
+  },
+  "teeth-whitening": {
+    title: "Teeth Whitening",
+    description: "Professional whitening treatments to safely and effectively brighten your smile.",
+    extendedDescription: "Our professional teeth whitening treatments remove stubborn stains and discoloration caused by coffee, tea, wine, and aging. Achieve a significantly brighter, more youthful smile in just one session or with our custom take-home kits.",
+    image: "/images/treatments/teeth_whitening.png",
+    benefits: [
+      "Immediate, noticeable results",
+      "Safe for your enamel and gums",
+      "Customized treatments for your sensitivity level",
+      "Removes deep, stubborn stains"
+    ],
+    process: [
+      { step: "01", title: "Consultation & Exam", desc: "We evaluate your current shade and ensure your teeth and gums are healthy for whitening." },
+      { step: "02", title: "Preparation", desc: "Your gums are protected, and the professional-strength whitening gel is applied." },
+      { step: "03", title: "Whitening Session", desc: "The gel is activated to break down stains and brighten your teeth." },
+      { step: "04", title: "Aftercare", desc: "We provide you with instructions and optional touch-up kits to maintain your bright smile." }
+    ],
+    faq: [
+      { q: "Is teeth whitening safe?", a: "Yes, professional teeth whitening is completely safe when performed under the supervision of a dentist. We take precautions to protect your gums and minimize sensitivity." },
+      { q: "How long do the results last?", a: "Results can last from several months to a few years, depending on your diet, oral hygiene habits, and whether you use touch-up treatments." },
+      { q: "Will it make my teeth sensitive?", a: "Some temporary sensitivity is normal. We offer desensitizing treatments and can customize the strength of the whitening gel for your comfort." }
+    ]
+  },
+  "crowns-bridges": {
+    title: "Dental Crowns & Bridges",
+    description: "Custom-crafted crowns and bridges to restore damaged or missing teeth.",
+    extendedDescription: "Crowns completely cover a damaged or weakened tooth, restoring its shape, size, strength, and appearance. Bridges replace one or more missing teeth by anchoring false teeth to adjacent natural teeth or implants, bridging the gap and restoring your bite.",
+    image: "/images/treatments/crown_bridge.png",
+    benefits: [
+      "Restores natural tooth function and aesthetics",
+      "Protects weak or decayed teeth",
+      "Prevents remaining teeth from shifting",
+      "Durable materials that match your natural teeth"
+    ],
+    process: [
+      { step: "01", title: "Assessment", desc: "We examine the affected teeth and discuss the best restorative options for your needs." },
+      { step: "02", title: "Preparation", desc: "The tooth is gently prepared, and digital impressions are taken for a precise fit." },
+      { step: "03", title: "Temporary Placement", desc: "A temporary crown or bridge is placed while your custom restoration is crafted." },
+      { step: "04", title: "Final Bonding", desc: "The permanent restoration is meticulously fitted, adjusted, and bonded into place." }
+    ],
+    faq: [
+      { q: "What are crowns and bridges made of?", a: "We primarily use high-quality porcelain and zirconia, which offer exceptional durability and closely mimic the natural translucency of teeth." },
+      { q: "How long do they last?", a: "With proper care and good oral hygiene, dental crowns and bridges can last 10 to 15 years or longer." },
+      { q: "Is the procedure painful?", a: "We use local anesthesia to ensure you are completely comfortable and pain-free during the preparation process." }
+    ]
+  },
+  "periodontics": {
+    title: "Gum Treatments (Periodontics)",
+    description: "Comprehensive care for healthy gums, treating and preventing periodontal disease.",
+    extendedDescription: "Healthy gums are the foundation of a healthy smile. Our periodontal treatments range from deep cleanings (scaling and root planing) to advanced surgical procedures to halt the progression of gum disease, restore gum health, and prevent tooth loss.",
+    image: "/images/treatments/gum-care.png",
+    benefits: [
+      "Halts the progression of gum disease",
+      "Prevents tooth and bone loss",
+      "Reduces gum inflammation and bleeding",
+      "Improves overall oral and systemic health"
+    ],
+    process: [
+      { step: "01", title: "Comprehensive Evaluation", desc: "We measure gum pockets and assess the severity of periodontal disease." },
+      { step: "02", title: "Deep Cleaning", desc: "Plaque and tartar are carefully removed from above and below the gumline." },
+      { step: "03", title: "Targeted Therapy", desc: "Antibiotics or advanced laser treatments may be used to eliminate bacteria." },
+      { step: "04", title: "Maintenance", desc: "Regular periodontal maintenance visits are scheduled to keep your gums healthy." }
+    ],
+    faq: [
+      { q: "What are the signs of gum disease?", a: "Common signs include red, swollen, or bleeding gums, persistent bad breath, receding gums, and loose teeth." },
+      { q: "Can gum disease be cured?", a: "While advanced gum disease (periodontitis) cannot be fully cured, it can be effectively managed and controlled to prevent further damage." },
+      { q: "Is deep cleaning painful?", a: "We typically use local anesthesia to numb the gums during scaling and root planing, ensuring a comfortable experience." }
+    ]
+  },
+  "dentures": {
+    title: "Dentures",
+    description: "Comfortable, natural-looking partial and complete dentures to restore your smile.",
+    extendedDescription: "Dentures are removable replacements for missing teeth and surrounding tissues. We offer custom-crafted partial and complete dentures designed to fit comfortably, function flawlessly, and look completely natural, giving you back your confidence to smile and eat.",
+    image: "/images/treatments/dentures.png",
+    benefits: [
+      "Restores the ability to eat and speak clearly",
+      "Supports facial muscles, preventing a sunken appearance",
+      "Custom-fitted for comfort and natural aesthetics",
+      "Cost-effective solution for multiple missing teeth"
+    ],
+    process: [
+      { step: "01", title: "Consultation & Impressions", desc: "We evaluate your oral health and take precise impressions of your jaws." },
+      { step: "02", title: "Bite Registration", desc: "We determine the correct jaw relationship for optimal function and aesthetics." },
+      { step: "03", title: "Try-In", desc: "You try on a wax model of the dentures to check the fit, appearance, and bite." },
+      { step: "04", title: "Final Delivery", desc: "The final dentures are delivered, and necessary adjustments are made for perfect comfort." }
+    ],
+    faq: [
+      { q: "Will dentures look natural?", a: "Yes, modern dentures are custom-made using high-quality materials that closely resemble natural teeth and gums." },
+      { q: "How do I care for my dentures?", a: "Brush them daily, soak them in a denture cleanser overnight, and maintain regular dental visits to check their fit and your oral health." },
+      { q: "Can I sleep with my dentures in?", a: "We recommend removing your dentures at night to give your gums and underlying tissues a chance to rest." }
+    ]
+  },
+  "full-mouth-rehab": {
+    title: "Full Mouth Rehabilitation",
+    description: "Comprehensive restorative and cosmetic treatments to fully rebuild your smile and oral health.",
+    extendedDescription: "Full mouth rehabilitation is a highly personalized treatment plan that combines multiple restorative and cosmetic procedures to completely rebuild and restore every tooth in the mouth. It is ideal for patients with extensive damage, decay, or wear, restoring both optimal function and aesthetics.",
+    image: "/images/treatments/mouth_rehabilitation.png",
+    benefits: [
+      "Completely restores oral health and function",
+      "Dramatically improves smile aesthetics",
+      "Eliminates pain and discomfort",
+      "Provides long-lasting, comprehensive results"
+    ],
+    process: [
+      { step: "01", title: "In-Depth Consultation", desc: "Extensive examination, 3D imaging, and discussion of your complex needs and goals." },
+      { step: "02", title: "Comprehensive Planning", desc: "We design a phased treatment plan integrating various specialties and procedures." },
+      { step: "03", title: "Phased Treatment", desc: "Procedures are performed in a carefully planned sequence to ensure optimal healing and results." },
+      { step: "04", title: "Final Restoration", desc: "The final crowns, veneers, or implants are placed, completing your functional and aesthetic transformation." }
+    ],
+    faq: [
+      { q: "What procedures are included?", a: "It varies per patient but can include implants, crowns, bridges, veneers, periodontics, and orthodontics." },
+      { q: "How long does the process take?", a: "Depending on the complexity, full mouth rehabilitation can take several months to a year or more, completed in phases." },
+      { q: "Is it affordable?", a: "We provide detailed cost estimates and offer flexible financing options to make this comprehensive care accessible." }
     ]
   }
 };

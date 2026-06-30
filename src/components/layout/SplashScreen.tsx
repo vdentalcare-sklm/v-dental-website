@@ -45,7 +45,7 @@ export default function SplashScreen() {
             className="w-[20rem] md:w-[32rem] object-contain z-10 bg-[#005C96]/5 rounded-3xl p-6 md:p-8 backdrop-blur-sm shadow-2xl"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "B" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           />
 
           {/* Tagline */}

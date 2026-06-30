@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Clock, MapPin, Phone, MessageSquare, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { Clock, MapPin, Phone, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
@@ -161,16 +161,16 @@ function handleBookAnother() {
         </motion.div>
       </section>
 
-      {/* ── Form + Sidebar ─────────────────────────────────────────────────── */}
+      {/* ── Form + Central Support ────────────────────────────────────────────── */}
       <section className="container mx-auto px-6 md:px-12 mb-24">
-        <div className="grid md:grid-cols-12 gap-12 lg:gap-24">
+        <div className="max-w-4xl mx-auto space-y-8">
 
           {/* Form card */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:col-span-7 lg:col-span-8 bg-white/80 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-[#E5E7EB]"
+            className="bg-white/80 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-[#E5E7EB]"
           >
             {formState === "success" ? (
               <motion.div
@@ -247,8 +247,8 @@ function handleBookAnother() {
                   </div>
                 </div>
 
-{/* Treatment */}
-<div className="space-y-2">
+                {/* Treatment */}
+                <div className="space-y-2">
                   <label className="text-sm font-medium text-text-secondary">
                     Treatment of Interest <span className="text-red-400">*</span>
                   </label>
@@ -298,44 +298,18 @@ function handleBookAnother() {
             )}
           </motion.div>
 
-          {/* Sidebar */}
+          {/* Central Support */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:col-span-5 lg:col-span-4 flex flex-col justify-center space-y-8"
+            className="bg-[#005C96]/5 p-8 rounded-3xl border border-[#005C96]/20 text-center"
           >
-
-
-<div className="bg-white/80 p-8 rounded-3xl border border-[#E5E7EB] relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#25D366]/10 to-transparent pointer-events-none" />
-              <div className="relative z-10 text-center flex flex-col items-center">
-                <div className="w-16 h-16 rounded-2xl bg-[#25D366]/20 flex items-center justify-center text-[#25D366] mb-6">
-                  <MessageSquare className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-light text-text-primary mb-3">
-                  Need immediate assistance?
-                </h3>
-                <p className="text-text-secondary font-light text-sm mb-8">
-                  Our team is available via WhatsApp for priority booking and urgent queries.
-                </p>
-                <button
-                  onClick={() => window.open("https://wa.me/919550508480", "_blank")}
-                  className="w-full bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] font-medium py-4 rounded-xl transition-colors flex items-center justify-center gap-2 border border-[#25D366]/30"
-                >
-                  <MessageSquare className="w-5 h-5" />
-                  Message on WhatsApp
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-[#005C96]/5 p-8 rounded-3xl border border-[#005C96]/20 text-center">
-              <h3 className="text-xl font-medium text-[#005C96] mb-2">Central Support</h3>
-              <p className="text-text-primary mb-4">info@vdentalcare.in</p>
-              <p className="text-text-secondary font-light text-sm">
-                Mon – Sun | 9:00 AM – 9:00 PM
-              </p>
-            </div>
+            <h3 className="text-xl font-medium text-[#005C96] mb-2">Central Support</h3>
+            <p className="text-text-primary mb-4">info@vdentalcare.in</p>
+            <p className="text-text-secondary font-light text-sm">
+              Mon – Sun | 9:00 AM – 9:00 PM
+            </p>
           </motion.div>
 
         </div>
